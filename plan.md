@@ -39,8 +39,8 @@
 - [x] fetch the data
 - [x] create action
 - [x] dispatch the action
-- [] (create reducer if it does not exist)
-- [] handle the action in the reducer (add a `case`)
+- [x] (create reducer if it does not exist)
+- [x] handle the action in the reducer (add a `case`)
 - [] create a selector
 - [] use the selector
 - [] display the data
