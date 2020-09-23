@@ -1,29 +1,25 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
+import { selectBlogPosts } from "../store/blogposts/selectors";
+import { fetchBlogPostsSuccess } from "../store/blogposts/actions";
 
 export default function BlogpostsList() {
   const dispatch = useDispatch();
-  const blogPosts = useSelector((reduxState) => reduxState.blogPosts);
-  console.log(blogPosts, "in component");
+  const blogPosts = useSelector(selectBlogPosts);
+
   useEffect(() => {
     const fetchBlogposts = async () => {
       const response = await axios.get(
         "https://codaisseur-coders-network.herokuapp.com/posts"
       );
 
-      console.log(response.data.rows);
-
-      const action = {
-        type: "FETCH_BLOGPOSTS",
-        payload: response.data.rows,
-      };
-
-      dispatch(action);
+      dispatch(fetchBlogPostsSuccess(response.data.rows));
     };
 
     fetchBlogposts();
   }, [dispatch]);
+
   return (
     <div>
       {blogPosts.map((post) => {
