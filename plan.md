@@ -41,8 +41,8 @@
 - [x] dispatch the action
 - [x] (create reducer if it does not exist)
 - [x] handle the action in the reducer (add a `case`)
-- [] create a selector
-- [] use the selector
+- [x] create a selector
+- [x] use the selector
 - [] display the data
 
 ## Approach 1:

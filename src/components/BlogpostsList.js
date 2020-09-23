@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function BlogpostsList() {
   const dispatch = useDispatch();
+  const blogPosts = useSelector((reduxState) => reduxState.blogPosts);
+  console.log(blogPosts, "in component");
   useEffect(() => {
     const fetchBlogposts = async () => {
       const response = await axios.get(
