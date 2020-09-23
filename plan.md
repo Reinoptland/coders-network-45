@@ -37,8 +37,8 @@
 
 - [x] create a component (& a route)
 - [x] fetch the data
-- [] create action
-- [] dispatch the action
+- [x] create action
+- [x] dispatch the action
 - [] (create reducer if it does not exist)
 - [] handle the action in the reducer (add a `case`)
 - [] create a selector
