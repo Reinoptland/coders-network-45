@@ -33,4 +33,22 @@
 - Wrap app in Provider
 - Test -> Redux Devtools, check initial state
 
-## Fetch a lsit of blogpost
+## Fetch a list of blogpost
+
+- [x] create a component (& a route)
+- [x] fetch the data
+- [] create action
+- [] dispatch the action
+- [] (create reducer if it does not exist)
+- [] handle the action in the reducer (add a `case`)
+- [] create a selector
+- [] use the selector
+- [] display the data
+
+## Approach 1:
+
+- Component does the fetching
+
+## Approach 2:
+
+- Action does the fetching (thunk)
