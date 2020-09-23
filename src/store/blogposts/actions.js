@@ -1,4 +1,5 @@
 import axios from "axios";
+import { baseUrl } from "../../config/vars";
 
 // Action types
 export const FETCH_BLOGPOSTS = "FETCH_BLOGPOSTS";
@@ -27,12 +28,9 @@ export const fetchBlogPostsSuccess = (blogPosts) => {
 export const fetchBlogposts = async (dispatch, getState) => {
   dispatch({ type: "APP_LOADING" });
 
-  const response = await axios.get(
-    "https://codaisseur-coders-network.herokuapp.com/posts"
-  );
+  const response = await axios.get(`${baseUrl}/posts`);
 
   dispatch(fetchBlogPostsSuccess(response.data.rows));
-
   dispatch({ type: "APP_DONE_LOADING" });
 };
 
