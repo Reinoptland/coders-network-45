@@ -1,6 +1,6 @@
 import { FETCH_BLOGPOSTS } from "./actions";
 
-const initialState = [];
+const initialState = [{}];
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
