@@ -43,7 +43,7 @@
 - [x] handle the action in the reducer (add a `case`)
 - [x] create a selector
 - [x] use the selector
-- [] display the data
+- [x] display the data
 
 ## Approach 1:
 
